@@ -91,4 +91,9 @@ struct AttributedTextView: UIViewControllerRepresentable {
 public struct EditMenuAction {
     var label: String
     var action: (String) -> Void
+
+    public init(label: String, action: @escaping (String) -> Void) {
+        self.label = label
+        self.action = action
+    }
 }
